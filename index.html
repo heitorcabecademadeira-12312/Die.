@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lendários Archive</title>
+    <style>
+        /* CSS - O Estilo do Site */
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(180deg, #1a1a1a, #0a0a0a);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Cartão do Item */
+        .card {
+            background: #161616;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #00d2ff;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .raridade {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #ff9d00; /* Cor Lendária */
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .nome-item {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #00d2ff;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BAÚ DOS ITENS LENDÁRIOS</h1>
+        <p>Os artefatos mais raros do servidor.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <span class="raridade">Lendário</span>
+            <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=300" alt="Espada">
+            <h3 class="nome-item">Espada de Neon</h3>
+            <button onclick="inspecionar('Espada de Neon')">INSPECIONAR</button>
+        </div>
+
+        <div class="card">
+            <span class="raridade" style="color: #a335ee;">Épico</span>
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=300" alt="Computador">
+            <h3 class="nome-item">Chip Quântico</h3>
+            <button onclick="inspecionar('Chip Quântico')">INSPECIONAR</button>
+        </div>
+
+        <div class="card">
+            <span class="raridade">Lendário</span>
+            <img src="https://images.unsplash.com/photo-1589256469067-ea99122bb5a5?auto=format&fit=crop&w=300" alt="Robô">
+            <h3 class="nome-item">Droid Sentinela</h3>
+            <button onclick="inspecionar('Droid Sentinela')">INSPECIONAR</button>
+        </div>
+
+    </div>
+
+    <script>
+        function inspecionar(nome) {
+            alert("Analisando " + nome + "... Este item possui +500 de poder de código!");
+        }
+    </script>
+
+</body>
+</html>
